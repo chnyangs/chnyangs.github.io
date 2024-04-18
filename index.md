@@ -7,10 +7,10 @@ Monash University
 
 <div style="display:flex; align-items:center;">
 
-<i class="fab fa-google" style="margin-right: 5px;"></i> [Google Scholar](https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en)
-<span style="margin-left: 10px; margin-right: 10px;">&nbsp;|&nbsp;</span>
+[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4?style=flat-square&logo=google-scholar&logoColor=white)](https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en)
 
-<i class="fab fa-linkedin" style="margin-right: 5px;"></i> [LinkedIn](https://www.linkedin.com/in/xiangwen-yang-272572158/)
+<span style="margin-left: 10px; margin-right: 10px;">&nbsp;|&nbsp;</span>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/xiangwen-yang-272572158/)
 
 </div>
 
