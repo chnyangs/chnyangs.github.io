@@ -1,7 +1,18 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 Xiangwen Yang<br>
 Software Programmer<br>
 Department of Software Systems and Cybersecurity<br>
 Monash University
+
+<div style="display:flex; align-items:center;">
+
+<i class="fab fa-google" style="margin-right: 5px;"></i> [Google Scholar](https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en)
+<span style="margin-left: 10px; margin-right: 10px;">&nbsp;|&nbsp;</span>
+
+<i class="fab fa-linkedin" style="margin-right: 5px;"></i> [LinkedIn](https://www.linkedin.com/in/xiangwen-yang-272572158/)
+
+</div>
 
 ## Overview
 
