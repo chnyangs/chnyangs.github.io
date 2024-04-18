@@ -1,5 +1,5 @@
 <nav style="background-color: #003153; height: 30px;">
-  
+<h2>Overview</h2>
 </nav>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -19,9 +19,9 @@ Monash University
 
 </div>
 
-## Overview
+## Biography
 
-Welcome to my GitHub page! I am a Software Programmer in the Department of Software Systems and Cybersecurity of the Faculty of Information Technology at [Monash University](https://www.monash.edu/). I'm driven by a robust work ethic and excel in collaborative settings, where I eagerly share my insights to tackle intricate challenges. My enthusiasm for learning is boundless, propelling me to continually broaden my skillset and embrace innovative approaches.
+I am a Software Programmer in the Department of Software Systems and Cybersecurity of the Faculty of Information Technology at [Monash University](https://www.monash.edu/). I'm driven by a robust work ethic and excel in collaborative settings, where I eagerly share my insights to tackle intricate challenges. My enthusiasm for learning is boundless, propelling me to continually broaden my skillset and embrace innovative approaches.
 
 ## Education
 
