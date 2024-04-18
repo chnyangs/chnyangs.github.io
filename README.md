@@ -7,10 +7,11 @@ Monash University
 
 <div style="display:flex; align-items:center;">
 
-[Google Scholar](https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en)
+<a href="https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en">[Google Scholar]</a>
 
-<span style="margin-left: 10px; margin-right: 10px;">&nbsp;|&nbsp;</span>
-[LinkedIn](https://www.linkedin.com/in/xiangwen-yang-272572158/)
+&nbsp;|&nbsp;
+
+<a href="https://www.linkedin.com/in/xiangwen-yang-272572158">[LinkedIn]</a>
 
 </div>
 
