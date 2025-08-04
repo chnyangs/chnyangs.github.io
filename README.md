@@ -1,666 +1,597 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@100;200;300;400;500;600;700;800;900&family=SF+Pro+Text:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arial:wght@400;600;700&display=swap">
 
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   
   body { 
-    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
-    line-height: 1.47059; 
-    color: #1d1d1f; 
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
     background: #ffffff;
-    font-size: 17px;
-    font-weight: 400;
+    font-size: 14px;
   }
   
-  .container { max-width: 980px; margin: 0 auto; padding: 0 22px; }
-  
-  /* Hero Section */
-  .hero-section { 
-    background: linear-gradient(135deg, #000000 0%, #1c1c1e 100%); 
-    color: #ffffff; 
-    padding: 80px 0 100px 0; 
-    text-align: center; 
-    position: relative;
-    overflow: hidden;
+  .container { 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
   }
   
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%);
+  /* Navigation */
+  .nav-bar {
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 15px 0;
+    margin-bottom: 30px;
   }
   
-  .hero-content { position: relative; z-index: 2; }
-  
-  .hero-title { 
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 56px; 
-    font-weight: 700; 
-    line-height: 1.07143;
-    letter-spacing: -0.005em;
-    margin-bottom: 16px; 
-  }
-  
-  .hero-subtitle { 
-    font-size: 28px; 
-    font-weight: 400; 
-    line-height: 1.14286;
-    letter-spacing: 0.007em;
-    opacity: 0.8; 
-    margin-bottom: 8px; 
-  }
-  
-  .hero-description { 
-    font-size: 21px; 
-    font-weight: 400; 
-    line-height: 1.381;
-    letter-spacing: 0.011em;
-    opacity: 0.7; 
-    margin-bottom: 40px;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .hero-links { 
-    display: flex; 
-    justify-content: center; 
-    gap: 24px; 
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
   }
   
-  .hero-link { 
-    color: #ffffff; 
-    text-decoration: none; 
-    padding: 12px 24px; 
-    border: 1px solid rgba(255,255,255,0.3); 
-    border-radius: 980px; 
-    font-size: 17px;
-    font-weight: 400;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    backdrop-filter: blur(20px);
-    background: rgba(255,255,255,0.1);
+  .nav-item {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
   }
   
-  .hero-link:hover { 
-    background: rgba(255,255,255,0.2); 
-    border-color: rgba(255,255,255,0.5);
-    transform: translateY(-1px);
+  .nav-item:hover {
+    background-color: #e9ecef;
   }
   
-  /* Section Styling */
-  .section { 
-    padding: 80px 0; 
-    border-bottom: 1px solid #d2d2d7;
+  /* Header */
+  .header {
+    text-align: left;
+    margin-bottom: 40px;
+    padding: 30px 0;
   }
   
-  .section:last-child { border-bottom: none; }
-  
-  .section-header { 
-    text-align: center; 
-    margin-bottom: 60px; 
+  .name {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
   }
   
-  .section-title { 
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 48px; 
-    font-weight: 700; 
-    line-height: 1.08333;
-    letter-spacing: -0.003em;
-    color: #1d1d1f; 
-    margin-bottom: 16px; 
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 5px;
   }
   
-  .section-subtitle { 
-    font-size: 21px; 
-    font-weight: 400; 
-    line-height: 1.381;
-    letter-spacing: 0.011em;
-    color: #86868b; 
-    max-width: 640px;
-    margin: 0 auto;
+  .affiliation {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
   }
   
-  /* Stats */
-  .stats-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 40px; 
-    margin: 60px 0; 
+  .contact-info {
+    font-size: 14px;
+    color: #666;
   }
   
-  .stat-card { 
-    text-align: center; 
-    padding: 40px 20px;
-    background: #f5f5f7;
-    border-radius: 18px;
-    transition: transform 0.3s ease;
+  .contact-links {
+    margin-top: 15px;
   }
   
-  .stat-card:hover { transform: translateY(-4px); }
-  
-  .stat-number { 
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 64px; 
-    font-weight: 700; 
-    line-height: 1;
-    color: #1d1d1f; 
-    margin-bottom: 8px;
+  .contact-links a {
+    color: #0066cc;
+    text-decoration: none;
+    margin-right: 20px;
   }
   
-  .stat-label { 
-    font-size: 17px; 
-    font-weight: 600; 
-    color: #86868b; 
-    text-transform: uppercase; 
-    letter-spacing: 0.5px; 
+  .contact-links a:hover {
+    text-decoration: underline;
   }
   
-  /* Cards */
-  .card-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 30px; 
-    margin: 60px 0; 
+  /* Sections */
+  .section {
+    margin-bottom: 50px;
   }
   
-  .card { 
-    background: #ffffff; 
-    border-radius: 18px; 
-    padding: 40px; 
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border: 1px solid #d2d2d7;
+  .section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
   }
   
-  .card:hover { 
-    transform: translateY(-8px); 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  .section-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
   }
   
-  .card-icon { 
-    font-size: 40px; 
-    margin-bottom: 20px; 
-    color: #007aff;
+  /* Overview */
+  .overview p {
+    margin-bottom: 15px;
+    text-align: justify;
   }
   
-  .card-title { 
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 24px; 
-    font-weight: 600; 
-    line-height: 1.16667;
-    color: #1d1d1f; 
-    margin-bottom: 12px; 
+  /* News */
+  .news-list {
+    list-style: none;
   }
   
-  .card-description { 
-    font-size: 17px; 
-    line-height: 1.47059;
-    color: #86868b; 
+  .news-item {
+    margin-bottom: 15px;
+    padding-left: 0;
   }
   
-  /* Content Blocks */
-  .content-block { 
-    background: #f5f5f7; 
-    border-radius: 18px; 
-    padding: 60px 40px; 
-    margin: 40px 0; 
+  .news-date {
+    font-weight: 600;
+    color: #0066cc;
+    display: inline;
   }
   
-  .content-block h3 { 
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 32px; 
-    font-weight: 600; 
-    line-height: 1.125;
-    color: #1d1d1f; 
-    margin-bottom: 20px; 
+  .news-content {
+    display: inline;
+    margin-left: 10px;
   }
   
-  .content-block p { 
-    font-size: 19px; 
-    line-height: 1.42105;
-    color: #1d1d1f; 
-    margin-bottom: 16px;
+  /* Publications */
+  .pub-category {
+    margin-bottom: 30px;
   }
   
-  .content-block ul { 
-    list-style: none; 
-    padding: 0; 
+  .pub-category-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
   }
   
-  .content-block li { 
-    font-size: 17px; 
-    line-height: 1.47059;
-    color: #1d1d1f; 
-    margin-bottom: 8px; 
-    padding-left: 20px;
-    position: relative;
+  .pub-list {
+    list-style: none;
   }
   
-  .content-block li::before { 
-    content: '•'; 
-    color: #007aff; 
-    font-weight: bold; 
-    position: absolute; 
-    left: 0; 
+  .pub-item {
+    margin-bottom: 15px;
+    padding-left: 0;
   }
   
-  /* Skills Tags */
-  .skills-container { 
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 12px; 
-    margin: 30px 0; 
+  .venue-tag {
+    font-weight: 600;
+    color: #0066cc;
+    margin-right: 5px;
   }
   
-  .skill-tag { 
-    background: #007aff; 
-    color: #ffffff; 
-    padding: 8px 16px; 
-    border-radius: 20px; 
-    font-size: 14px; 
-    font-weight: 600; 
-    letter-spacing: 0.5px;
+  .pub-title {
+    font-weight: 600;
+    color: #333;
   }
   
-  /* News Items */
-  .news-list { 
-    list-style: none; 
-    padding: 0; 
+  .pub-authors {
+    color: #666;
+    font-style: italic;
   }
   
-  .news-item { 
-    padding: 30px 0; 
-    border-bottom: 1px solid #d2d2d7; 
+  .pub-venue {
+    color: #666;
   }
   
-  .news-item:last-child { border-bottom: none; }
-  
-  .news-date { 
-    font-size: 14px; 
-    font-weight: 600; 
-    color: #86868b; 
-    text-transform: uppercase; 
-    letter-spacing: 0.5px; 
-    margin-bottom: 8px; 
+  .pub-link {
+    color: #0066cc;
+    text-decoration: none;
+    margin-left: 10px;
   }
   
-  .news-title { 
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 24px; 
-    font-weight: 600; 
-    line-height: 1.16667;
-    color: #1d1d1f; 
-    margin-bottom: 8px; 
+  .pub-link:hover {
+    text-decoration: underline;
   }
   
-  .news-description { 
-    font-size: 17px; 
-    line-height: 1.47059;
-    color: #86868b; 
+  /* Experience */
+  .exp-item {
+    margin-bottom: 25px;
   }
   
-  /* Responsive Design */
+  .exp-title {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .exp-org {
+    color: #666;
+    font-style: italic;
+  }
+  
+  .exp-date {
+    color: #666;
+    font-size: 13px;
+  }
+  
+  .exp-desc {
+    margin-top: 8px;
+    color: #333;
+  }
+  
+  .exp-desc ul {
+    margin-left: 20px;
+    margin-top: 5px;
+  }
+  
+  .exp-desc li {
+    margin-bottom: 5px;
+  }
+  
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .skill-category {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .skill-category h4 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .skill-tag {
+    background: #e9ecef;
+    color: #333;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #dee2e6;
+    margin-top: 50px;
+    color: #666;
+    font-size: 12px;
+  }
+  
+  /* Responsive */
   @media (max-width: 768px) {
-    .hero-title { font-size: 40px; }
-    .hero-subtitle { font-size: 24px; }
-    .hero-description { font-size: 19px; }
-    .section-title { font-size: 32px; }
-    .section { padding: 60px 0; }
-    .card-grid { grid-template-columns: 1fr; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  
-  @media (max-width: 480px) {
-    .container { padding: 0 16px; }
-    .hero-title { font-size: 32px; }
-    .stats-grid { grid-template-columns: 1fr; }
+    .nav-menu {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .name {
+      font-size: 28px;
+    }
+    
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 
-<!-- Hero Section -->
-<div class="hero-section">
+<!-- Navigation -->
+<div class="nav-bar">
   <div class="container">
-    <div class="hero-content">
-      <h1 class="hero-title">Xiangwen Yang</h1>
-      <p class="hero-subtitle">Blockchain Security Researcher</p>
-      <p class="hero-description">Advancing the frontiers of blockchain resilience and privacy-preserving technologies through innovative research and practical implementation.</p>
-      
-      <div class="hero-links">
-        <a href="https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en" target="_blank" class="hero-link">
-          <i class="fas fa-graduation-cap"></i> Google Scholar
-        </a>
-        <a href="https://www.linkedin.com/in/xiangwen-wayne-yang-272572158/" target="_blank" class="hero-link">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="mailto:Wayne.Yang@Monash.edu" class="hero-link">
-          <i class="fas fa-envelope"></i> Contact
-        </a>
-      </div>
-    </div>
+    <nav class="nav-menu">
+      <a href="#overview" class="nav-item">Home</a>
+      <a href="#research" class="nav-item">Research</a>
+      <a href="#publications" class="nav-item">Publications</a>
+      <a href="#experience" class="nav-item">Experience</a>
+      <a href="#news" class="nav-item">News</a>
+      <a href="#contact" class="nav-item">Contact</a>
+    </nav>
   </div>
 </div>
 
-<!-- Research Impact Section -->
-<div class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Research Impact</h2>
-      <p class="section-subtitle">Advancing blockchain security and privacy-preserving technologies through cutting-edge research</p>
+<!-- Header -->
+<div class="container">
+  <div class="header">
+    <h1 class="name">Xiangwen Yang</h1>
+    <div class="title">Software Programmer & Blockchain Researcher</div>
+    <div class="affiliation">
+      Cybersecurity Group<br>
+      Department of Software Systems and Cybersecurity<br>
+      Monash University<br>
+      School of Computer Science and Engineering<br>
+      University of Sydney
     </div>
-    
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-number">15+</div>
-        <div class="stat-label">Publications</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">5+</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">A/A*</div>
-        <div class="stat-label">CORE Venues</div>
-      </div>
+    <div class="contact-info">
+      Email: Wayne.Yang [at] Monash.edu | xyan0559 [at] sydney.edu.au
     </div>
-  </div>
-</div>
-
-<!-- About Section -->
-<div class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">About</h2>
-      <p class="section-subtitle">Bridging theoretical research with practical blockchain applications</p>
-    </div>
-    
-    <div class="content-block">
-      <p>I am an accomplished Software Programmer and Blockchain Researcher at Monash University's Department of Software Systems and Cybersecurity. My work sits at the intersection of theoretical research and practical implementation, where I bridge the gap between cutting-edge academic research and real-world blockchain applications.</p>
-      
-      <p>With a Master's degree in Information Technology from Monash University and extensive experience in both industry and academia, I specialize in enhancing blockchain resilience through innovative system design and advanced machine learning techniques.</p>
-      
-      <p>My research has been published at premier venues including NDSS, ICML, ICDM, and ACM AsiaCCS, contributing to the fields of blockchain security, graph neural networks, and privacy-preserving technologies.</p>
+    <div class="contact-links">
+      <a href="https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en" target="_blank">
+        <i class="fas fa-graduation-cap"></i> Google Scholar
+      </a>
+      <a href="https://www.linkedin.com/in/xiangwen-wayne-yang-272572158/" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="publication/overview.md">Publications</a>
     </div>
   </div>
-</div>
 
-<!-- Research Focus Section -->
-<div class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Research Focus</h2>
-      <p class="section-subtitle">Enhancing blockchain resilience through innovative system design and advanced cryptographic techniques</p>
-    </div>
-    
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-icon">🔐</div>
-        <h3 class="card-title">Blockchain Security</h3>
-        <p class="card-description">Developing diversity-aware blockchain systems, consensus mechanism resilience, and post-quantum cryptographic implementations for enhanced security.</p>
-      </div>
+  <!-- Overview Section -->
+  <div class="section" id="overview">
+    <h2 class="section-title">Overview</h2>
+    <div class="section-content overview">
+      <p>I am a Software Programmer and Blockchain Researcher at Monash University's Department of Software Systems and Cybersecurity, with a joint appointment at the University of Sydney's School of Computer Science and Engineering. My work focuses on enhancing blockchain resilience through innovative system design, bridging the critical gap between theoretical security models and practical implementation challenges.</p>
       
-      <div class="card">
-        <div class="card-icon">🤖</div>
-        <h3 class="card-title">Graph Neural Networks</h3>
-        <p class="card-description">Researching privacy attacks and defenses in GNNs, model extraction attacks, and adversarial robustness in graph-based systems.</p>
-      </div>
+      <p>With a Master's degree in Information Technology from Monash University and extensive experience in both industry and academia, I specialize in blockchain security, graph neural networks, and privacy-preserving technologies. My research has been published at premier venues including NDSS, ICML, ICDM, and ACM AsiaCCS, contributing significantly to the fields of distributed systems security and machine learning privacy.</p>
       
-      <div class="card">
-        <div class="card-icon">🛡️</div>
-        <h3 class="card-title">Privacy-Preserving Tech</h3>
-        <p class="card-description">Advancing Trusted Execution Environments, encrypted database systems, and privacy-preserving machine learning techniques.</p>
-      </div>
-      
-      <div class="card">
-        <div class="card-icon">🔒</div>
-        <h3 class="card-title">Applied Cryptography</h3>
-        <p class="card-description">Implementing leader election protocols, sustainable blockchain consensus mechanisms, and cryptographic protocol design.</p>
-      </div>
+      <p>I am always looking for self-motivated students and research collaborators. Please email me your CV, research interests, and a brief statement (no more than 200 words) describing your background and research goals.</p>
     </div>
   </div>
-</div>
 
-<!-- Technical Expertise Section -->
-<div class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Technical Expertise</h2>
-      <p class="section-subtitle">Comprehensive technical skills spanning blockchain development, machine learning, and cybersecurity</p>
-    </div>
-    
-    <div class="content-block">
-      <h3>Programming Languages</h3>
-      <div class="skills-container">
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">JavaScript/TypeScript</span>
-        <span class="skill-tag">Java</span>
-        <span class="skill-tag">C/C++</span>
-        <span class="skill-tag">Solidity</span>
-        <span class="skill-tag">Go</span>
-        <span class="skill-tag">Rust</span>
-      </div>
-      
-      <h3>Blockchain & Distributed Systems</h3>
-      <div class="skills-container">
-        <span class="skill-tag">Ethereum</span>
-        <span class="skill-tag">Hyperledger Fabric</span>
-        <span class="skill-tag">Consensus Algorithms</span>
-        <span class="skill-tag">Smart Contracts</span>
-        <span class="skill-tag">DeFi Protocols</span>
-      </div>
-      
-      <h3>Machine Learning & AI</h3>
-      <div class="skills-container">
-        <span class="skill-tag">PyTorch</span>
-        <span class="skill-tag">TensorFlow</span>
-        <span class="skill-tag">Graph Neural Networks</span>
-        <span class="skill-tag">Deep Learning</span>
-        <span class="skill-tag">Privacy-Preserving ML</span>
-      </div>
-      
-      <h3>Security & Cryptography</h3>
-      <div class="skills-container">
-        <span class="skill-tag">TEE (Intel SGX)</span>
-        <span class="skill-tag">Cryptographic Protocols</span>
-        <span class="skill-tag">Zero-Knowledge Proofs</span>
-        <span class="skill-tag">Secure Multi-party Computation</span>
-      </div>
+  <!-- News Section -->
+  <div class="section" id="news">
+    <h2 class="section-title">News</h2>
+    <div class="section-content">
+      <ul class="news-list">
+        <li class="news-item">
+          <span class="news-date">[Jan'24]</span>
+          <span class="news-content">Our paper "GraphGuard: Detecting and Counteracting Training Data Misuse in Graph Neural Networks" has been accepted by NDSS'24.</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">[Dec'23]</span>
+          <span class="news-content">Presented latest findings on diversity-aware blockchain systems at the International Blockchain Security Conference.</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">[Sep'23]</span>
+          <span class="news-content">Started research collaboration with University of Sydney on post-quantum cryptographic implementations for blockchain systems.</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">[Jul'23]</span>
+          <span class="news-content">Our paper "Demystifying Uneven Vulnerability of Link Stealing Attacks against Graph Neural Networks" has been accepted by ICML'23.</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">[Apr'23]</span>
+          <span class="news-content">Our paper "A New Look at Blockchain Leader Election: Simple, Efficient, Sustainable and Post-Quantum" has been accepted by ACM AsiaCCS'23.</span>
+        </li>
+      </ul>
     </div>
   </div>
-</div>
 
-
-<!-- Recent News Section -->
-<div class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Recent News</h2>
-      <p class="section-subtitle">Latest updates on research, publications, and professional activities</p>
-    </div>
-    
-    <div class="news-list">
-      <div class="news-item">
-        <div class="news-date">January 2024</div>
-        <h3 class="news-title">GraphGuard Paper Accepted at NDSS 2024</h3>
-        <p class="news-description">Our research on detecting and counteracting training data misuse in graph neural networks has been accepted at the Network and Distributed System Security Symposium.</p>
-      </div>
+  <!-- Research Section -->
+  <div class="section" id="research">
+    <h2 class="section-title">Research Interests</h2>
+    <div class="section-content">
+      <p>I have broad interests in computer security, including secure distributed systems, trustworthy machine learning, and blockchain resilience. My recent research focus includes:</p>
       
-      <div class="news-item">
-        <div class="news-date">December 2023</div>
-        <h3 class="news-title">Speaking at Blockchain Security Conference</h3>
-        <p class="news-description">Presented latest findings on diversity-aware blockchain systems and their impact on consensus mechanism resilience.</p>
-      </div>
-      
-      <div class="news-item">
-        <div class="news-date">September 2023</div>
-        <h3 class="news-title">New Research Collaboration</h3>
-        <p class="news-description">Started collaboration with University of Sydney on post-quantum cryptographic implementations for blockchain systems.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Education Section -->
-<div class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Education</h2>
-      <p class="section-subtitle">Academic foundation in information technology and software engineering</p>
-    </div>
-
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-icon">🎓</div>
-        <h3 class="card-title">Monash University</h3>
-        <p class="card-description"><strong>Master of Information Technology</strong><br>2018 - 2020<br><em>Specialization: Software Systems and Cybersecurity</em></p>
-      </div>
-      
-      <div class="card">
-        <div class="card-icon">🎓</div>
-        <h3 class="card-title">Nanjing University of Posts and Telecommunications</h3>
-        <p class="card-description"><strong>Bachelor of Software Engineering</strong><br>2009 - 2013<br><em>Foundation in software development and computer science</em></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Publications Section -->
-<div class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Publications</h2>
-      <p class="section-subtitle">Contributing to blockchain security, graph neural networks, and privacy-preserving technologies</p>
-    </div>
-    
-    <div class="content-block">
-      <p>My research contributions span blockchain security, graph neural networks, and privacy-preserving technologies, with publications at top-tier venues including NDSS, ICML, ICDM, and ACM AsiaCCS.</p>
-      
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">15+</div>
-          <div class="stat-label">Peer-Reviewed Papers</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">A/A*</div>
-          <div class="stat-label">CORE Venues</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">3</div>
-          <div class="stat-label">Research Areas</div>
-        </div>
-      </div>
-      
-      <p style="text-align: center; margin-top: 40px;">
-        <a href="publication/overview.md" class="hero-link" style="color: #007aff; border-color: #007aff;">View Complete Publication List</a>
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- Professional Experience Section -->
-<div class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Experience</h2>
-      <p class="section-subtitle">Professional journey in blockchain research and software development</p>
-    </div>
-    
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-icon">💻</div>
-        <h3 class="card-title">Software Programmer</h3>
-        <p class="card-description"><strong>Monash University</strong><br>Dec 2020 - Present<br><br>Leading full-stack development for blockchain research projects, coordinating cross-functional teams, and bridging academic research with practical implementation.</p>
-      </div>
-      
-      <div class="card">
-        <div class="card-icon">👨‍🏫</div>
-        <h3 class="card-title">Teaching Associate</h3>
-        <p class="card-description"><strong>Monash University</strong><br>Jul 2020 - Dec 2020<br><br>Conducted Network Security tutorials, mentored students in cybersecurity concepts, and developed educational materials.</p>
-      </div>
-      
-      <div class="card">
-        <div class="card-icon">📊</div>
-        <h3 class="card-title">Research Assistant</h3>
-        <p class="card-description"><strong>Monash University</strong><br>Sep 2019 - Nov 2020<br><br>Spearheaded data analysis and modeling projects, enhanced AI integration, and developed machine learning models.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Achievements Section -->
-<div class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Notable Achievements</h2>
-      <p class="section-subtitle">Recognition and leadership in blockchain research and education</p>
-    </div>
-    
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-icon">🏗️</div>
-        <h3 class="card-title">ACE-SIP Blockchain Hackathon</h3>
-        <p class="card-description"><strong>Organizer</strong><br>Sep 2022 - Dec 2022<br><br>Led comprehensive blockchain hackathon focused on sustainability informatics, coordinating projects across environmental and social impact themes.</p>
-      </div>
-      
-      <div class="card">
-        <div class="card-icon">🎓</div>
-        <h3 class="card-title">Summer Research Scholarship</h3>
-        <p class="card-description"><strong>Monash University</strong><br>Dec 2019 - Mar 2020<br><br>Developed advanced encrypted database systems and enhanced data security frameworks for academic and commercial applications.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Contact Section -->
-<div class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Let's Connect</h2>
-      <p class="section-subtitle">Open to collaborations in blockchain security, privacy-preserving technologies, and graph neural networks</p>
-    </div>
-    
-    <div class="content-block">
-      <div style="text-align: center;">
-        <p style="font-size: 21px; margin-bottom: 30px;">Ready to collaborate on cutting-edge blockchain security research?</p>
-        
-        <div class="hero-links" style="margin-bottom: 40px;">
-          <a href="mailto:Wayne.Yang@Monash.edu" class="hero-link" style="color: #007aff; border-color: #007aff;">
-            <i class="fas fa-envelope"></i> Wayne.Yang@Monash.edu
-          </a>
-          <a href="mailto:xyan0559@sydney.edu.au" class="hero-link" style="color: #007aff; border-color: #007aff;">
-            <i class="fas fa-envelope"></i> xyan0559@sydney.edu.au
-          </a>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Blockchain Security & Resilience</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Diversity-aware Systems</span>
+            <span class="skill-tag">Consensus Mechanisms</span>
+            <span class="skill-tag">Post-quantum Cryptography</span>
+            <span class="skill-tag">Smart Contract Security</span>
+          </div>
         </div>
         
-        <div class="hero-links">
-          <a href="https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en" target="_blank" class="hero-link" style="color: #007aff; border-color: #007aff;">
-            <i class="fas fa-graduation-cap"></i> Google Scholar
-          </a>
-          <a href="https://www.linkedin.com/in/xiangwen-wayne-yang-272572158/" target="_blank" class="hero-link" style="color: #007aff; border-color: #007aff;">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
+        <div class="skill-category">
+          <h4>Graph Neural Networks Security</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Privacy Attacks & Defenses</span>
+            <span class="skill-tag">Model Extraction</span>
+            <span class="skill-tag">Membership Inference</span>
+            <span class="skill-tag">Adversarial Robustness</span>
+          </div>
         </div>
         
-        <p style="margin-top: 40px; color: #86868b;">
-          <strong>Affiliations:</strong><br>
-          Monash University - Department of Software Systems and Cybersecurity<br>
-          University of Sydney - School of Computer Science and Engineering
-        </p>
+        <div class="skill-category">
+          <h4>Privacy-Preserving Technologies</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Trusted Execution Environments</span>
+            <span class="skill-tag">Encrypted Databases</span>
+            <span class="skill-tag">Secure Multi-party Computation</span>
+            <span class="skill-tag">Zero-Knowledge Proofs</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>Technical Skills</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript/TypeScript</span>
+            <span class="skill-tag">Solidity</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Ethereum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Publications Section -->
+  <div class="section" id="publications">
+    <h2 class="section-title">Recent Publications</h2>
+    <div class="section-content">
+      <p>My full publication list can be found at <a href="https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en" target="_blank">Google Scholar</a> and <a href="publication/overview.md">detailed publication page</a>.</p>
+      
+      <div class="pub-category">
+        <h3 class="pub-category-title">Secure and Trustworthy Graph Learning</h3>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <span class="venue-tag">[NDSS'24]</span>
+            <span class="pub-title">GraphGuard: Detecting and Counteracting Training Data Misuse in Graph Neural Networks</span><br>
+            <span class="pub-authors">Bang Wu, He Zhang, <strong>Xiangwen Yang</strong>, Shuo Wang, Minhui Xue, Shirui Pan, Xingliang Yuan</span><br>
+            <span class="pub-venue">Network and Distributed System Security Symposium, San Diego, USA, 2024</span>
+            <a href="https://www.ndss-symposium.org/ndss-paper/graphguard-detecting-and-counteracting-training-data-misuse-in-graph-neural-networks/" class="pub-link" target="_blank">PDF</a>
+          </li>
+          
+          <li class="pub-item">
+            <span class="venue-tag">[ICML'23]</span>
+            <span class="pub-title">Demystifying Uneven Vulnerability of Link Stealing Attacks against Graph Neural Networks</span><br>
+            <span class="pub-authors">He Zhang, Bang Wu, Shuo Wang, <strong>Xiangwen Yang</strong>, Minhui Xue, Shirui Pan, Xingliang Yuan</span><br>
+            <span class="pub-venue">International Conference on Machine Learning, Honolulu, Hawaii, USA, 2023</span>
+            <a href="https://proceedings.mlr.press/v202/zhang23aq/zhang23aq.pdf" class="pub-link" target="_blank">PDF</a>
+          </li>
+          
+          <li class="pub-item">
+            <span class="venue-tag">[ACM AsiaCCS'22]</span>
+            <span class="pub-title">Model Extraction Attacks on Graph Neural Networks: Taxonomy and Realisation</span><br>
+            <span class="pub-authors">Bang Wu, <strong>Xiangwen Yang</strong>, Shirui Pan, Xingliang Yuan</span><br>
+            <span class="pub-venue">17th ACM ASIA Conference on Computer and Communications Security, 2022</span>
+            <a href="https://dl.acm.org/doi/abs/10.1145/3488932.3497753" class="pub-link" target="_blank">PDF</a>
+          </li>
+          
+          <li class="pub-item">
+            <span class="venue-tag">[IEEE ICDM'21]</span>
+            <span class="pub-title">Adapting Membership Inference Attacks to GNN for Graph Classification: Approaches and Implications</span><br>
+            <span class="pub-authors">Bang Wu, <strong>Xiangwen Yang</strong>, Shirui Pan, Xingliang Yuan</span><br>
+            <span class="pub-venue">IEEE International Conference on Data Mining, 2021</span>
+            <a href="https://ieeexplore.ieee.org/document/9679062" class="pub-link" target="_blank">PDF</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="pub-category">
+        <h3 class="pub-category-title">Blockchain Security and Cryptography</h3>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <span class="venue-tag">[ACM AsiaCCS'23]</span>
+            <span class="pub-title">A New Look at Blockchain Leader Election: Simple, Efficient, Sustainable and Post-Quantum</span><br>
+            <span class="pub-authors">Muhammed F Esgin, Oguzhan Ersoy, Veronika Kuchta, Julian Loss, Amin Sakzad, Ron Steinfeld, <strong>Xiangwen Yang</strong>, Raymond K Zhao</span><br>
+            <span class="pub-venue">18th ACM ASIA Conference on Computer and Communications Security, 2023</span>
+            <a href="https://dl.acm.org/doi/abs/10.1145/3579856.3595792" class="pub-link" target="_blank">PDF</a>
+          </li>
+          
+          <li class="pub-item">
+            <span class="venue-tag">[ACM CIKM'21]</span>
+            <span class="pub-title">Projective Ranking: A Transferable Evasion Attack Method on Graph Neural Networks</span><br>
+            <span class="pub-authors">He Zhang, Bang Wu, <strong>Xiangwen Yang</strong>, Chuan Zhou, Shuo Wang, Xingliang Yuan, Shirui Pan</span><br>
+            <span class="pub-venue">30th ACM International Conference on Information and Knowledge Management, 2021</span>
+            <a href="https://dl.acm.org/doi/abs/10.1145/3459637.3482161" class="pub-link" target="_blank">PDF</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience Section -->
+  <div class="section" id="experience">
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="section-content">
+      <div class="exp-item">
+        <div class="exp-title">Software Programmer</div>
+        <div class="exp-org">Monash University</div>
+        <div class="exp-date">Dec 2020 - Present</div>
+        <div class="exp-desc">
+          <ul>
+            <li>Leading full-stack development for cutting-edge blockchain research projects</li>
+            <li>Coordinating cross-functional teams including researchers and PhD students</li>
+            <li>Bridging academic research and practical implementation in blockchain security</li>
+            <li>Developing scalable solutions for distributed systems and consensus mechanisms</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="exp-item">
+        <div class="exp-title">Teaching Associate</div>
+        <div class="exp-org">Monash University</div>
+        <div class="exp-date">Jul 2020 - Dec 2020</div>
+        <div class="exp-desc">
+          <ul>
+            <li>Conducted Network Security tutorials for undergraduate and postgraduate students</li>
+            <li>Mentored students in cybersecurity concepts and practical implementations</li>
+            <li>Developed educational materials for security protocol analysis</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="exp-item">
+        <div class="exp-title">Research Assistant / Data Analyst</div>
+        <div class="exp-org">Monash University</div>
+        <div class="exp-date">Sep 2019 - Nov 2020</div>
+        <div class="exp-desc">
+          <ul>
+            <li>Spearheaded data analysis and modeling for Planning & Equipment Utilization Review Project</li>
+            <li>Enhanced AI integration into system prototypes and research frameworks</li>
+            <li>Developed machine learning models for predictive analytics and optimization</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="exp-item">
+        <div class="exp-title">Organizer - ACE-SIP Blockchain Hackathon</div>
+        <div class="exp-org">Monash University</div>
+        <div class="exp-date">Sep 2022 - Dec 2022</div>
+        <div class="exp-desc">
+          Led comprehensive blockchain hackathon focused on sustainability informatics, coordinating projects across environmental, governmental, and social impact themes.
+        </div>
+      </div>
+      
+      <div class="exp-item">
+        <div class="exp-title">Research Scholar - Summer Research Scholarship</div>
+        <div class="exp-org">Monash University</div>
+        <div class="exp-date">Dec 2019 - Mar 2020</div>
+        <div class="exp-desc">
+          Developed and evaluated advanced encrypted database systems, enhancing data security frameworks for academic and commercial applications.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education Section -->
+  <div class="section">
+    <h2 class="section-title">Education</h2>
+    <div class="section-content">
+      <div class="exp-item">
+        <div class="exp-title">Master of Information Technology</div>
+        <div class="exp-org">Monash University</div>
+        <div class="exp-date">2018 - 2020</div>
+        <div class="exp-desc">Specialization: Software Systems and Cybersecurity</div>
+      </div>
+      
+      <div class="exp-item">
+        <div class="exp-title">Bachelor of Software Engineering</div>
+        <div class="exp-org">Nanjing University of Posts and Telecommunications</div>
+        <div class="exp-date">2009 - 2013</div>
+        <div class="exp-desc">Foundation in software development and computer science principles</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="section" id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="section-content">
+      <p>I am always interested in discussing research collaborations, consulting opportunities, and potential PhD student supervision. Please feel free to reach out!</p>
+      
+      <div style="margin-top: 20px;">
+        <strong>Email:</strong> Wayne.Yang [at] Monash.edu | xyan0559 [at] sydney.edu.au<br>
+        <strong>Google Scholar:</strong> <a href="https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en" target="_blank">Research Profile</a><br>
+        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/xiangwen-wayne-yang-272572158/" target="_blank">Professional Network</a><br><br>
+        
+        <strong>Affiliations:</strong><br>
+        Monash University - Department of Software Systems and Cybersecurity<br>
+        University of Sydney - School of Computer Science and Engineering
       </div>
     </div>
   </div>
 </div>
 
 <!-- Footer -->
-<div style="background: #f5f5f7; padding: 60px 0; text-align: center; margin-top: 80px;">
+<div class="footer">
   <div class="container">
-    <p style="font-size: 19px; color: #86868b; font-style: italic;">
-      "Bridging the gap between theoretical blockchain security and practical implementation"
-    </p>
+    <p>Last Update: January, 2025</p>
+    <p>"Bridging the gap between theoretical blockchain security and practical implementation"</p>
   </div>
 </div>
