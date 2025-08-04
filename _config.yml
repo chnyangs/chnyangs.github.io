@@ -1,2 +1,41 @@
-name: Xiangwen's site
-title: null
+name: Xiangwen Yang - Blockchain Researcher & Software Programmer
+title: Xiangwen Yang | Blockchain Security & Privacy Research
+description: >-
+  Software Programmer and Blockchain Researcher at Monash University specializing in 
+  blockchain security, graph neural networks, and privacy-preserving technologies. 
+  Published at top venues including NDSS, ICML, and ICDM.
+
+author:
+  name: Xiangwen Yang
+  email: Wayne.Yang@Monash.edu
+
+url: "https://chnyangs.github.io"
+baseurl: ""
+
+# Social media and academic profiles
+social:
+  name: Xiangwen Yang
+  links:
+    - https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en
+    - https://www.linkedin.com/in/xiangwen-wayne-yang-272572158/
+
+# SEO settings
+lang: en
+timezone: Australia/Melbourne
+
+# GitHub Pages settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Navigation
+header_pages:
+  - publication/overview.md
+
+# Research keywords for SEO
+keywords: >-
+  blockchain security, graph neural networks, privacy-preserving technologies,
+  trusted execution environment, diversity-aware blockchains, cryptography,
+  machine learning security, Monash University, cybersecurity research
