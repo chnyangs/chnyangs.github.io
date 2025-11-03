@@ -21,7 +21,7 @@ Currently, I’m focused on leveraging my skills in blockchain (Rust, Solidity, 
 I’m committed to continuous improvement—both in technology and research—with a focus on impact-driven work.
 
 ### Highlights
-- A $10,000 blockchain bug bounty · 5+ blockchain systems (supply chain, pharmaceuticals, agriculture) · 9+ co-authored publications (NDSS, ICML, ACM AsiaCCS) · 7+ domains (Agriculture, Healthcare, Law Enforcement, Energy, Transport, Cybersecurity, Supply Chain) · 10% solar PV efficiency gain via ML · 3M+ records analyzed (crime analytics)
+- A $10,000 blockchain bug bounty · 3+ blockchain systems (Repucoin, supply chain(pharmaceuticals, honey)) · 9+ co-authored publications (NDSS, ICML, ACM AsiaCCS) · 7+ domains (Agriculture, Healthcare, Law Enforcement, Energy, Transport, Cybersecurity, Supply Chain) · 10% solar PV efficiency gain via ML · 3M+ records analyzed (crime analytics)
 
 ---
 
