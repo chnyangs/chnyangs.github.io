@@ -1,0 +1,79 @@
+# Site Configuration
+description: >-
+  Senior Software Engineer | Blockchain Security Researcher | Cross-Domain Project Leader
+
+# # Author Information
+# author: Xiangwen Yang
+
+# Site Settings
+url: "https://chnyangs.github.io"
+baseurl: ""
+repository: chnyangs/chnyangs.github.io
+
+# Social Media and Academic Profiles
+# Removed to prevent footer generation
+
+# SEO and Metadata
+lang: en
+timezone: Australia/Melbourne
+
+# GitHub Pages Configuration
+# theme: minima  # Disabled to use custom layout
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-sitemap
+
+# Navigation Structure
+header_pages: []
+
+# Collections for Research
+collections:
+  research:
+    output: true
+    permalink: /research/:name
+  projects:
+    output: true
+    permalink: /projects/:name
+
+# Research Keywords for SEO
+keywords: >-
+  blockchain security, graph neural networks, privacy-preserving technologies,
+  trusted execution environment, diversity-aware blockchains, post-quantum cryptography,
+  consensus mechanisms, smart contract security, machine learning privacy,
+  membership inference attacks, model extraction, adversarial robustness,
+  secure multi-party computation, zero-knowledge proofs, encrypted databases,
+  Monash University, University of Sydney, cybersecurity research, NDSS, ICML,
+  ACM AsiaCCS, distributed systems security, blockchain resilience
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Xiangwen Yang"
+  - scope:
+      path: ""
+      type: "research"
+    values:
+      layout: "research"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Exclude from Processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
