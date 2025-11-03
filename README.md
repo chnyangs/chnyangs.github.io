@@ -31,7 +31,7 @@ I’m committed to continuous improvement—both in technology and research—wi
 - <strong>Research Assistant</strong>, Monash University · Australia · Sep 2021–Dec 2021 — Proof-of-concept Algorand traceability with IoT sensors (agri supply chain).
 - <strong>Teaching Associate</strong>, Monash University · Australia · Jul 2020–Dec 2020 — Network Security (TLS, VPNs, firewall).
 - <strong>PHP Developer & Team leader</strong>, EDUPLUS · Australia  · Feb 2018–Nov 2019 — Web application front and backend design and development. Review code and lead junior developer on different projects.
-- <strong>Senior Software Engineer</strong>, Asiainfo · China · Aug 2023-Apr 2017 — Backend development for a large telecommunications system, especially focusing on broadband service change business logic.
+- <strong>Senior Software Engineer</strong>, Asiainfo · China · Aug 2013-Apr 2017 — Backend development for a large telecommunications system, especially focusing on broadband service change business logic.
 
 
 ---
