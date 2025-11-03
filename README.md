@@ -67,4 +67,6 @@ I’m committed to continuous improvement—both in technology and research—wi
 ---
 
 ## Education
-- PhD, Computer Science — University of Sydney (2024–Present) · Master of IT — Monash University (2018–2020) · Bachelor of Software Engineering — NJUPT (2009–2013)
+- PhD, Computer Science — University of Sydney (2024–Present)
+- Master of IT — Monash University (2018–2020)
+- Bachelor of Software Engineering — Nanjing University of Posts and Telecommunications (2009–2013)
