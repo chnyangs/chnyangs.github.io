@@ -4,7 +4,7 @@
     <td>
       <h1 style="margin:0">Xiangwen (Wayne) Yang</h1>
       <p style="margin:4px 0 6px 0"><strong>Senior Software Engineer · Blockchain Security Researcher · Cross-Domain Project Leader</strong></p>
-      <p style="margin:0">📍 Melbourne, Australia · ✉️ xwy411 [at] gmail [dot] com · 🔗 <a href="https://www.linkedin.com/in/xiangwen-wayne-yang-272572158/">LinkedIn</a> · <a href="https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en">Google Scholar</a> · <a href="https://github.com/chnyangs">GitHub</a></p>
+      <p style="margin:0">📍 Melbourne, Australia · ✉️ xwy411 [at] gmail [dot] com · 🔗 <a href="https://www.linkedin.com/in/xiangwen-wayne-yang-272572158/" target="_blank">LinkedIn</a> · <a href="https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
     </td>
   </tr>
 </table>
