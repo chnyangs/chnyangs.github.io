@@ -12,13 +12,11 @@
 ---
 
 ## Summary
-I’m a software engineer and data analyst with over 10 years of experience building high-impact systems across multiple sectors — including agriculture, healthcare, and technology. I specialise in transforming complex technical challenges into actionable business outcomes: whether that’s designing agentic AI systems, modelling large-scale data for predictive insights, or building and integrating blockchain and NLP solutions.
+I am a software engineer and data analyst with over a decade of experience designing and delivering high-impact systems across agriculture, healthcare, and technology. I specialize in transforming complex technical challenges into practical, scalable solutions—whether that’s architecting agentic AI systems, modelling large-scale data for predictive insight, or developing secure, end-to-end blockchain and NLP applications.
 
-My background spans backend development for large-scale telecommunications platforms, telemetry and IoT-driven analytics for fleets and solar PV farms, and academic teaching in software, data and systems design. I thrive on cross-disciplinary work — collaborating with stakeholders in business, operations and research to deliver prototypes and dashboards that enable data-driven decision-making.
+Currently, I am pursuing a PhD in Computer Science at the University of Sydney, where my research focuses on blockchain network resilience and the security of decentralized infrastructures. My goal is to bridge research and engineering by transforming academic findings into real-world tools and systems that strengthen the reliability and scalability of blockchain ecosystems.
 
-Currently, I’m focused on leveraging my skills in blockchain (Rust, Solidity, on-chain/off-chain integration), prompt engineering and system security to build next-gen platforms that bridge real-world assets, decentralized infrastructure and enterprise applications.
-
-I’m committed to continuous improvement—both in technology and research—with a focus on impact-driven work.
+My background spans backend development for enterprise telecommunications, IoT analytics for fleets and solar PV systems, and academic teaching in software and data design. I thrive in cross-disciplinary teams, collaborating with business, research, and operations stakeholders to translate technical innovation into measurable impact. I remain committed to continuous improvement—in both technology and research—with a focus on creating meaningful, real-world impact.
 
 ### Highlights
 - A $10,000 blockchain bug bounty · 3+ blockchain systems (Repucoin, supply chain(pharmaceuticals, honey)) · 9+ co-authored publications (NDSS, ICML, ACM AsiaCCS) · 7+ domains (Agriculture, Healthcare, Law Enforcement, Energy, Transport, Cybersecurity, Supply Chain) · 10% solar PV efficiency gain via ML · 3M+ records analyzed (crime analytics)
@@ -26,7 +24,7 @@ I’m committed to continuous improvement—both in technology and research—wi
 ---
 
 ## Professional Experience
-- <strong>Senior Software Engineer</strong>, Monash University · Australia · Dec 2020–Present — Lead blockchain security projects; Proof-of-concept Algorand traceability with IoT sensors (agri supply chain); Solar PV efficiency analytics; sensitive crime data modeling (emerging trend detection); manage 2–3 concurrent cross-domain deliveries.
+- <strong>Senior Software Engineer</strong>, Monash University · Australia · Sep 2019–Sep 2024 — Lead blockchain security projects; Proof-of-concept Algorand traceability with IoT sensors (agri supply chain); Solar PV efficiency analytics; sensitive crime data modeling (emerging trend detection); manage 2–3 concurrent cross-domain deliveries.
 - <strong>Teaching Associate</strong>, Monash University · Australia · Jul 2020–Dec 2020 — Network Security (TLS, VPNs, firewall).
 - <strong>PHP Developer & Team leader</strong>, EDUPLUS · Australia  · Feb 2018–Nov 2019 — Web application front and backend design and development. Review code and lead junior developer on different projects.
 - <strong>Senior Software Engineer</strong>, Asiainfo · China · Aug 2013-Apr 2017 — Backend development for a large telecommunications system, especially focusing on broadband service change business logic.
@@ -35,8 +33,9 @@ I’m committed to continuous improvement—both in technology and research—wi
 ---
 
 ## Selected Projects
-- <strong>Honey Provenance (Blockchain)</strong> · Backend & Web · Jun 2025–Now — Immutable ledger + QR/RFID/GPS; end-to-end traceability (AU → SE Asia), counterfeit prevention, batch recall.
-- <strong>Memory-Augmented LLM IDS</strong> · AI/Security · Jul 2024–May 2025 — Agent with short/long-term memory + code-aware analysis; zero-day discovery (USD $10k bounty).
+
+- <strong>Memory-Augmented LLM IDS</strong> · AI/Security · Jul 2024–Current — Agent with short/long-term memory + code-aware analysis; zero-day discovery (USD $10k bounty).
+- <strong>Honey Provenance (Blockchain)</strong> · Backend & Web · Jan 2024–Sep 2024 — Immutable ledger + QR/RFID/GPS; end-to-end traceability (AU → SE Asia), counterfeit prevention, batch recall.
 - <strong>Victoria Police Crime Analytics</strong> · Data · Dec 2023–May 2024 — 3M+ records; regression & pattern mining; actionable trend insights for resourcing.
 - <strong>Cyber Defence Capability</strong> · AI/Web · May 2023–Dec 2023 — Real-time audio-to-text, emotion detection, incident-response tooling; improved situational awareness.
 - <strong>Solar PV Analytics</strong> · ML · Sep 2022–Oct 2023 — Telemetry + weather fusion; anomaly detection & predictive maintenance; ~10% efficiency uplift.
@@ -50,7 +49,7 @@ I’m committed to continuous improvement—both in technology and research—wi
 - <strong>Blockchain</strong>: Algorand/Ethereum, consensus protocols, DApps, on-chain/off-chain integration
 - <strong>AI/LLM</strong>: Memory-augmented agents, zero-day detection, trustworthy AI safeguards, real-time cyber defense, NLP & emotion analysis
 - <strong>Data Analytics</strong>: Predictive modeling, anomaly detection, statistical analysis, large-scale data processing
-- <strong>Software Engineering</strong>: Python, Go, TypeScript/JS · PyTorch, React, Node.js, FastAPI · Docker, Kubernetes, CI/CD · SQL/NoSQL
+- <strong>Software Engineering</strong>: Python, Go, TypeScript/JS · PyTorch, FastAPI · UI/UX · Docker, Kubernetes, CI/CD · SQL/NoSQL
 
 ## Selected Publications
 - [NDSS'24] GraphGuard: Detecting and Counteracting Training Data Misuse in GNNs — Bang Wu, He Zhang, <strong>Xiangwen Yang</strong>, et al.
