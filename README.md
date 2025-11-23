@@ -24,7 +24,7 @@ My background spans backend development for enterprise telecommunications, IoT a
 ---
 
 ## Professional Experience
-- <strong>Senior Software Engineer</strong>, Monash University · Australia · Sep 2019–Sep 2025 — Lead blockchain security projects; Proof-of-concept Algorand traceability with IoT sensors (agri supply chain); Solar PV efficiency analytics; sensitive crime data modeling (emerging trend detection); manage 2–3 concurrent cross-domain deliveries.
+- <strong>Senior Software Engineer</strong>, Monash University · Australia · Sep 2019–Sep 2024 — Lead blockchain security projects; Proof-of-concept Algorand traceability with IoT sensors (agri supply chain); Solar PV efficiency analytics; sensitive crime data modeling (emerging trend detection); manage 2–3 concurrent cross-domain deliveries.
 - <strong>Teaching Associate</strong>, Monash University · Australia · Jul 2020–Dec 2020 — Network Security (TLS, VPNs, firewall).
 - <strong>PHP Developer & Team leader</strong>, EDUPLUS · Australia  · Feb 2018–Nov 2019 — Web application front and backend design and development. Review code and lead junior developer on different projects.
 - <strong>Senior Software Engineer</strong>, Asiainfo · China · Aug 2013-Apr 2017 — Backend development for a large telecommunications system, especially focusing on broadband service change business logic.
