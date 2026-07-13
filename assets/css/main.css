@@ -1,0 +1,352 @@
+/* ============================================================
+   Xiangwen (Wayne) Yang — classic serif homepage
+   Aesthetic: journal-offprint. Ivory ground, EB Garamond,
+   maroon held to link-ink only, old-style figures, hairline
+   rules with one structural double-rule masthead.
+   ============================================================ */
+
+:root {
+  --ivory:      #FBF7EF;   /* page ground                     */
+  --ink:        #1a1a1a;   /* body text + structural rules    */
+  --maroon:     #7B1E1E;   /* links / accent — used sparingly */
+  --maroon-dark:#5f1616;   /* link hover                      */
+  --hair:       #E4D8C8;   /* the one hairline colour         */
+  --muted:      #6b6257;   /* meta: dates, venues, captions   */
+  --measure:    720px;     /* text column                     */
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.62;
+  /* old-style figures everywhere (declared two ways for reach) */
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-feature-settings: "onum" 1, "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 52px 28px 40px;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: var(--maroon);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--maroon-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: from-font;
+}
+a:focus-visible {
+  outline: 2px solid var(--maroon);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* ---------- Running head (journal folio line) ---------- */
+.running-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1em;
+  margin: 0 0 16px;
+  font-variant-caps: all-small-caps;
+  letter-spacing: .16em;
+  font-size: .72rem;
+  color: var(--muted);
+}
+
+/* ---------- Masthead — the one structural double rule ---------- */
+.masthead {
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  padding: 5px 0;
+}
+.masthead__inner {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 28px 0 26px;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+.masthead__text { flex: 1 1 auto; min-width: 0; }
+
+.name {
+  margin: 0 0 .45rem;
+  font-weight: 500;
+  font-size: clamp(2.05rem, 6vw, 2.7rem);
+  line-height: 1.05;
+  letter-spacing: .005em;
+  text-wrap: balance;
+}
+.name .alias {           /* the "(Wayne)" parenthetical */
+  font-style: italic;
+  font-weight: 400;
+  font-size: .82em;
+  color: var(--muted);
+}
+
+.title-line {
+  margin: 0 0 .95rem;
+  font-variant-caps: small-caps;   /* mixed-case role line -> caps+small-caps */
+  letter-spacing: .06em;
+  font-weight: 600;
+  font-size: .96rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.contact {
+  margin: 0;
+  font-size: .92rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.contact .loc { color: var(--muted); }
+.sep { color: var(--hair); padding: 0 .45em; }
+
+.portrait {
+  flex: 0 0 auto;
+  width: 116px;
+  height: 116px;
+  max-width: 100%;
+  object-fit: cover;
+  border: 1px solid var(--hair);
+  border-radius: 2px;
+  filter: grayscale(10%);
+}
+
+/* ---------- Site nav ---------- */
+.site-nav {
+  display: flex;
+  gap: 1.4em;
+  margin: 14px 0 0;
+  font-variant-caps: all-small-caps;
+  letter-spacing: .12em;
+  font-size: .8rem;
+}
+.site-nav a { color: var(--muted); }
+.site-nav a:hover { color: var(--maroon-dark); }
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+/* ---------- Section headings — flex hairline rubric ---------- */
+h2 {
+  display: flex;
+  align-items: baseline;
+  gap: .8em;
+  margin: 2.7em 0 1.05em;
+  font-variant-caps: all-small-caps;
+  letter-spacing: .13em;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+}
+h2::after {               /* rule that fills the rest of the line */
+  content: "";
+  flex: 1 1 auto;
+  height: 0;
+  border-top: 1px solid var(--hair);
+  transform: translateY(-.18em);
+}
+
+p { margin: 0 0 1.05em; }
+
+/* ---------- About (book-body prose) ---------- */
+.lead p { text-align: left; }
+.lead p + p { text-indent: 1.4em; }        /* flush first, indent rest */
+.lead p:last-child { margin-bottom: 0; }
+.incipit {
+  font-variant-caps: all-small-caps;
+  letter-spacing: .04em;
+}
+
+/* ---------- Highlights (weight, not colour) ---------- */
+.highlights {
+  margin: 0;
+  padding: 1em 0;
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+  font-size: .95rem;
+  line-height: 1.95;
+}
+.highlights .num { font-weight: 600; }
+.highlights .sep { padding: 0 .35em; }
+
+/* ---------- Entries: experience / projects / education ---------- */
+.entry { margin: 0 0 1.5em; }
+.entry:last-child { margin-bottom: 0; }
+.entry__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: .5em 1.4em;
+  flex-wrap: wrap;
+  margin: 0 0 .1em;
+}
+.role { font-weight: 600; }
+.org  { color: var(--ink); }
+.tag {
+  font-variant-caps: all-small-caps;
+  letter-spacing: .07em;
+  color: var(--muted);
+  font-size: .9em;
+}
+.dates {
+  color: var(--muted);
+  font-size: .84rem;
+  font-variant-caps: all-small-caps;
+  letter-spacing: .06em;
+  white-space: nowrap;
+}
+.entry__body { margin: .12em 0 0; }
+
+/* ---------- Skills ---------- */
+.skills {
+  display: grid;
+  grid-template-columns: 12em 1fr;
+  column-gap: 1.6em;
+  row-gap: .7em;
+  margin: 0;
+}
+.skills dt {
+  font-variant-caps: all-small-caps;
+  letter-spacing: .09em;
+  color: var(--muted);
+  font-size: .95rem;
+  padding-top: .05em;
+}
+.skills dd { margin: 0; }
+
+/* ---------- Bibliography (numbered — home "Selected Publications") ---------- */
+.bib {
+  list-style: none;
+  counter-reset: ref;
+  margin: 0;
+  padding: 0;
+}
+.bib li {
+  counter-increment: ref;
+  position: relative;
+  padding-left: 2.6em;
+  margin: 0 0 1.05em;
+}
+.bib li::before {
+  content: "[" counter(ref) "]";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--muted);
+  /* lining figures for the reference numerals (the deliberate onum/lnum split) */
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+}
+.ptitle  { font-style: italic; }
+.authors { color: var(--ink); }
+.me      { font-weight: 600; }
+.venue {
+  color: var(--muted);
+  font-variant-caps: all-small-caps;
+  letter-spacing: .05em;
+}
+
+.pubnav { margin: 1.25em 0 0; font-size: .95rem; }
+.pubnav a { white-space: nowrap; }
+
+/* ---------- Full publications page (grouped by year) ---------- */
+.year { margin-top: 2.4em; }
+.year:first-of-type { margin-top: 1.4em; }
+.year > h3 {
+  margin: 0 0 1.1em;
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: .02em;
+}
+.pub {
+  padding-left: 6.2em;
+  position: relative;
+  margin: 0 0 1.4em;
+}
+.pub .venue-tag {
+  position: absolute;
+  left: 0;
+  top: .15em;
+  width: 5.4em;
+  text-align: left;
+  color: var(--muted);
+  font-variant-caps: all-small-caps;
+  letter-spacing: .05em;
+  font-size: .82rem;
+  line-height: 1.35;
+}
+.pub .pub-body { margin: 0; }
+.pub .doi { white-space: nowrap; }
+
+/* ---------- Ornament + footer colophon ---------- */
+.ornament {
+  margin: 2.6em 0 0;
+  display: flex;
+  align-items: center;
+  gap: 1.1em;
+  color: var(--maroon);
+}
+.ornament::before,
+.ornament::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--hair);
+}
+.ornament span { font-size: .9rem; line-height: 1; transform: rotate(45deg); }
+
+.colophon {
+  margin: 1.5em 0 0;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.7;
+}
+.colophon a { color: var(--muted); }
+.colophon a:hover { color: var(--maroon-dark); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 620px) {
+  body { font-size: 18.5px; }
+  main { padding: 38px 20px 32px; }
+  .masthead__inner { flex-direction: column; align-items: flex-start; gap: 22px; }
+  .portrait { width: 96px; height: 96px; }
+  .pub { padding-left: 0; }
+  .pub .venue-tag { position: static; width: auto; display: block; margin-bottom: .1em; }
+}
+@media (max-width: 520px) {
+  .skills { grid-template-columns: 1fr; row-gap: .1em; }
+  .skills dt { padding-top: .6em; }
+  .skills dd { margin-bottom: .5em; }
+  .entry__head { gap: .15em .9em; }
+}
+
+/* ---------- Print (offprint) ---------- */
+@media print {
+  :root { --ivory: #fff; }
+  body { font-size: 11.5pt; }
+  main { max-width: none; padding: 0; }
+  .site-nav, .pubnav { display: none; }
+  a { color: var(--ink); text-decoration: none; }
+  h2, .entry, .pub, .bib li { break-inside: avoid; }
+}
