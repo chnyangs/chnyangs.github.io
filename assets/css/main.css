@@ -12,7 +12,7 @@
   --maroon-dark:#5f1616;   /* link hover                      */
   --hair:       #E4D8C8;   /* the one hairline colour         */
   --muted:      #6b6257;   /* meta: dates, venues, captions   */
-  --measure:    720px;     /* text column                     */
+  --measure:    880px;     /* text column                     */
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -23,9 +23,9 @@ body {
   margin: 0;
   background: var(--ivory);
   color: var(--ink);
-  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
-  font-size: 20px;
-  line-height: 1.62;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 19px;
+  line-height: 1.6;
   /* old-style figures everywhere (declared two ways for reach) */
   font-variant-numeric: oldstyle-nums proportional-nums;
   font-feature-settings: "onum" 1, "kern" 1, "liga" 1;
