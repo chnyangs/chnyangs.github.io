@@ -384,7 +384,7 @@ p {
 
 .timeline__item {
   display: grid;
-  grid-template-columns: 105px minmax(0, 1fr);
+  grid-template-columns: 124px minmax(0, 1fr);
   gap: 22px;
   padding: 0 0 22px;
 }
@@ -410,6 +410,16 @@ p {
 .timeline__item p:last-child {
   margin: 0;
   color: #41474d;
+}
+
+.experience-details {
+  margin: 9px 0 0;
+  padding-left: 1.15rem;
+  color: #41474d;
+}
+
+.experience-details li + li {
+  margin-top: 0.38rem;
 }
 
 .project-list {
