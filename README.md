@@ -4,7 +4,7 @@
     <td>
       <h1 style="margin:0">Xiangwen (Wayne) Yang</h1>
       <p style="margin:4px 0 6px 0"><strong>Senior Software Engineer · Blockchain Security Researcher · Cross-Domain Project Leader</strong></p>
-      <p style="margin:0">📍 Melbourne, Australia · ✉️ xwy411 [at] gmail [dot] com · 🔗 <a href="https://www.linkedin.com/in/xiangwen-wayne-yang-272572158/" target="_blank">LinkedIn</a> · <a href="https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+      <p style="margin:0">📍 Melbourne, Australia · ✉️ xwy411 [at] gmail [dot] com · 🔗 <a href="https://au.linkedin.com/in/xiangwen-yang-272572158/" target="_blank">LinkedIn</a> · <a href="https://scholar.google.com/citations?user=j9YiIqMAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
     </td>
   </tr>
 </table>
@@ -59,7 +59,7 @@ My background spans backend development for enterprise telecommunications, IoT a
 - [IEEE ICDM'21] Adapting Membership Inference Attacks to GNN for Graph Classification — Wu, <strong>Yang</strong>, Pan, Yuan.
 - [ACM CIKM'21] Projective Ranking: A Transferable Evasion Attack on GNNs — Zhang, Wu, <strong>Yang</strong>, et al.
 
-[All publications →](https://scholar.google.com.au/citations?user=j9YiIqMAAAAJ&hl=en)
+[All publications →](https://scholar.google.com/citations?user=j9YiIqMAAAAJ&hl=en)
 
 ---
 
